@@ -2,7 +2,7 @@ export type Task = {
     id: string,
     title: string,
     description?: string,
-    day: Days,
+    day: Weekdays,
     assignee?: string,
     priority?: PriorityLevel,
     status?: boolean,
@@ -14,4 +14,4 @@ export enum PriorityLevel {
     "Low"
 }
 
-export type Days = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
+export type Weekdays = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
