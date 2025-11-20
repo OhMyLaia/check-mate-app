@@ -4,7 +4,7 @@ import type { Task, Weekdays } from '../types/Task';
 import { useTranslation } from 'react-i18next';
 
 
-function HomePage() {
+function DashboardPage() {
 
     const { t } = useTranslation();
     const days: Weekdays[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -52,4 +52,4 @@ function HomePage() {
     )
 }
 
-export default HomePage
+export default DashboardPage
