@@ -1,0 +1,16 @@
+{
+    "landing": {
+        "title": "Check Mate",
+        "subtitle": "Plats nets, adéu discussions.",
+        "intro": {
+            "hook": "Cansat de guerres de neteja? Amb Check Mate, l'únic drama és a la TV.",
+            "description": "Oblida't de les notes passiu-agressives amb tasques actives i compartides. Descobreix la nova manera d'organitzar les tasques de la llar."
+        },
+        "benefits": {
+            "create": "Crea tasques a l'instant. Assigna feines als teus companys i reparteix la càrrega amb un sol toc.",
+            "dashboard": "La teva casa d'un cop d'ull. El teu tauler intel·ligent mostra qui fa què, què ve després i quan està fet.",
+            "gamify": "Fes de la neteja un joc, no una guerra. Completa missions, guanya insígnies i converteix la neteja en una competició amistosa.",
+            "supplies": "Mai et quedis sense sabó. Controla els subministraments i afegeix essencials com bosses d'escombraries o esponges a una llista de la compra central."
+        }
+    }
+}

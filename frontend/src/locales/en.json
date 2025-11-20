@@ -1,0 +1,16 @@
+{
+    "landing": {
+        "title": "Check Mate",
+        "subtitle": "Dishes done, arguments gone.",
+        "intro": {
+            "hook": "Tired of chore wars? With Check Mate, your only drama is on the TV.",
+            "description": "Stop passive-aggressive notes with active, shared tasks. Discover the new way of organising your house chores."
+        },
+        "benefits": {
+            "create": "Create tasks in a snap. Assign chores to your housemates and share the load with a single tap.",
+            "dashboard": "See your house at a glance. Your smart dashboard shows who's doing what, what's up next, and when it's done.",
+            "gamify": "Make chores a game, not a war. Complete missions, earn badges, and turn cleaning into a friendly competition.",
+            "supplies": "Never run out of soap again. Track shared supplies and add essentials like trash bags or sponges to a central shopping list."
+        }
+    }
+}

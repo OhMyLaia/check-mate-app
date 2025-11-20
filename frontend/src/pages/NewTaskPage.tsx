@@ -1,9 +1,11 @@
-import React from 'react'
+import { randomUUID } from 'crypto'
+import React, { useState } from 'react'
 
 function NewTaskPage() {
-    return (
-        <div>NewTaskPage</div>
+    return(
+        <>
+        </>
     )
 }
 
-export default NewTaskPage
+export default NewTaskPage;

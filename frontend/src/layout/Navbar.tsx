@@ -3,6 +3,7 @@ import { FiX, FiMenu } from "react-icons/fi";
 // import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logoLettersCheckMate from "../assets/logo-letters-check-mate.png";
+import { useTranslation } from 'react-i18next';
 
 
 function Navbar() {
@@ -11,7 +12,8 @@ function Navbar() {
     const [isMobile, setIsMobile] = useState<boolean>(false);
     // this is useful for the login / logout button
     // const navigate = useNavigate();
-    const menuRef = useRef<HTMLDivElement>(null)
+    const menuRef = useRef<HTMLDivElement>(null);
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         const checkScreenSize = () => {
@@ -50,6 +52,10 @@ function Navbar() {
     const toggleMenu = () => {
         setIsActive(prev => !prev)
     }
+
+    const changeLanguage = (lng: string) => {
+        i18n.changeLanguage(lng);
+    };
 
 
 
@@ -90,6 +96,11 @@ function Navbar() {
             </Link>
         )} */}
             </ul>
+            <div className="flex flex-row me-2 text-xs">
+                <button onClick={() => changeLanguage('en')} className="mr-2 font-bold">EN</button>
+                <button onClick={() => changeLanguage('es')} className="mr-2 font-bold">ES</button>
+                <button onClick={() => changeLanguage('ca')} className="font-bold">CA</button>
+            </div>
 
             {/* Mobile button */}
             {isMobile && (

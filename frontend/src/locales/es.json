@@ -1,0 +1,16 @@
+{
+    "landing": {
+        "title": "Check Mate",
+        "subtitle": "Platos limpios, adiós discusiones.",
+        "intro": {
+            "hook": "¿Cansado de guerras de limpieza? Con Check Mate, el único drama está en la TV.",
+            "description": "Olvídate de las notas pasivo-agresivas con tareas activas y compartidas. Descubre la nueva forma de organizar las tareas del hogar."
+        },
+        "benefits": {
+            "create": "Crea tareas al instante. Asigna deberes a tus compañeros y reparte la carga con un solo toque.",
+            "dashboard": "Tu casa de un vistazo. Tu panel inteligente muestra quién hace qué, qué sigue y cuándo está listo.",
+            "gamify": "Haz de la limpieza un juego, no una guerra. Completa misiones, gana insignias y convierte la limpieza en una competencia amistosa.",
+            "supplies": "Nunca te quedes sin jabón de nuevo. Controla los suministros y añade básicos como bolsas de basura o esponjas a una lista de compras central."
+        }
+    }
+}
