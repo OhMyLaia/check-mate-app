@@ -23,9 +23,9 @@ function TaskCard(props: TaskCardProps) {
         onClick={toggleClick}
         >
             <div
-            className={`p-3 shadow-sm rounded-md border-l-8
+            className={`p-3 shadow-sm rounded border-l-15
                 text-sm text-slate-700 hover:shadow-md transition-shadow cursor-pointer
-                ${finishedTask ? "border-emerald-400" : "border-orange-500 bg-orange-200"}`}>
+                ${finishedTask ? "border-emerald-400 bg-emerald-50" : "border-orange-500 text-bold"}`}>
                     {<IconWrapper
                     icon={finishedTask ? <FiCheckCircle /> : ""}
                     children={props.task.title}

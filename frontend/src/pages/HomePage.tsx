@@ -24,8 +24,8 @@ function HomePage() {
                 {days.map((day) => (
                     <div
                         key={day}
-                        className="bg-slate-50 rounded-xl border border-slate-200 flex flex-col shadow-sm min-h-[200px]"
-                    >
+                        className="bg-slate-50 rounded-xl border border-slate-200
+                        flex flex-col shadow-sm min-h-[200px]">
                         <h2 className="bg-indigo-900 text-white p-2 text-center font-bold rounded-t-xl uppercase text-sm tracking-wider">
                             {t(`weekdays.${day}`)}
                         </h2>
