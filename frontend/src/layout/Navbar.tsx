@@ -29,7 +29,7 @@ function Navbar() {
 
     useEffect(() => {
         const handleClickOutsideMenuRef = (e: MouseEvent) => {
-            if (menuRef.current && menuRef.current.contains(e.target as Node)) {
+            if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
                 setIsActive(false);
             }
         }
