@@ -12,5 +12,14 @@
             "gamify": "Fes de la neteja un joc, no una guerra. Completa missions, guanya insígnies i converteix la neteja en una competició amistosa.",
             "supplies": "Mai et quedis sense sabó. Controla els subministraments i afegeix essencials com bosses d'escombraries o esponges a una llista de la compra central."
         }
+    },
+    "weekdays": {
+        "Monday": "Dilluns",
+        "Tuesday": "Dimarts",
+        "Wednesday": "Dimecres",
+        "Thursday": "Dijous",
+        "Friday": "Divendres",
+        "Saturday": "Dissabte",
+        "Sunday": "Diumenge"
     }
 }

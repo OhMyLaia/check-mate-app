@@ -12,5 +12,14 @@
             "gamify": "Haz de la limpieza un juego, no una guerra. Completa misiones, gana insignias y convierte la limpieza en una competencia amistosa.",
             "supplies": "Nunca te quedes sin jabón de nuevo. Controla los suministros y añade básicos como bolsas de basura o esponjas a una lista de compras central."
         }
+    },
+    "weekdays": {
+        "Monday": "Lunes",
+        "Tuesday": "Martes",
+        "Wednesday": "Miércoles",
+        "Thursday": "Jueves",
+        "Friday": "Viernes",
+        "Saturday": "Sábado",
+        "Sunday": "Domingo"
     }
 }
