@@ -41,7 +41,7 @@ function Navbar() {
     }, []);
 
     const links = [
-        { name: 'Home', path: '/home' },
+        { name: 'Dashboard', path: '/home' },
         { name: 'New Task', path: '/new-task' },
         // { name: 'Dashboard', path: '/dashboard'},
         { name: 'Profile', path: '/profile' },
@@ -106,7 +106,8 @@ function Navbar() {
             {isMobile && (
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden w-fit text-3xl text-indigo-900 focus:outline-none transition-transform duration-300 hover:scale-110"
+                    className="md:hidden w-fit text-3xl text-indigo-900 focus:outline-none
+                    transition-transform duration-300 hover:scale-110"
                     aria-label="Toggle menu"
                 >
                     {isActive ? <FiX /> : <FiMenu />}
@@ -126,7 +127,7 @@ function Navbar() {
                     <li className='w-fit' key={link.name}>
                         <Link
                             to={link.path}
-                            className="block py-2 hover:bg-gray-100 hover:bg-opacity-20 transition-colors duration-200"
+                            className="block hover:scale-105 py-2 transition-colors duration-200"
                             onClick={() => setIsActive(false)}
                         >
                             {link.name}
