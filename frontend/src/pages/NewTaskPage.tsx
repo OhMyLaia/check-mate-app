@@ -2,24 +2,37 @@ import { randomUUID } from 'crypto'
 import React, { useState } from 'react'
 import PrimaryButton from '../components/PrimaryButton';
 import GenericSelect from '../components/GenericSelect';
-import { HouseTask, Task } from '../types/Task';
+import { HouseTask, PriorityLevel, Task, Weekdays } from '../types/Task';
 import { User } from '../types/User';
+import { userNamesList } from '../utils/mock_data/mock_users_households';
 
 function NewTaskPage() {
 
     const [task, setTask] = useState<HouseTask | "">("");
-    const [assignee, setAssignee] = useState<User | "">("");
+    const [assignee, setAssignee] = useState<string>("");
+    const [priority, setPriority] = useState<PriorityLevel | "">("");
+    const [day, setDay] = useState<Weekdays | "">("");
 
 
     const taskOptions: HouseTask[] = Object.values(HouseTask);
-    const userOptions: User[]
+    const priorityOptions: PriorityLevel[] = Object.values(PriorityLevel);
+    const weekdaysOptions: Weekdays[] = Object.values(Weekdays)
 
     return (
         <main className='p-4 flex flex-col justify-start items-center w-full text-indigo-900'>
-            <h2 className='text-center lato-regular'>New custom task</h2>
+            <h2 className='text-center lato-regular text-3xl'>New custom task</h2>
             <div className='bg-emerald-50 h-1/3 w-3/4 shadow-lg m-5'>
                 <form className='flex flex-col gap-y-4 w-full p-5'>
-                    <label htmlFor="task_id" className="font-medium"> Task </label>
+
+                <label htmlFor="task_id" className="font-medium"> Select a task </label>
+                    <GenericSelect
+                        label="task"
+                        value={task}
+                        options={taskOptions}
+                        onChange={setTask}
+                        translationPrefix='tasks_list'
+                    />
+                    <label htmlFor="task_id" className="font-thin"> Can't find it? Create a custom task </label>
                     <input
                         className="w-full border border-emerald-400 rounded-xl bg-white p-3"
                         type="text"
@@ -28,6 +41,7 @@ function NewTaskPage() {
                     // value={formData.name}
                     // onChange={handleChange}
                     />
+
                     <label htmlFor="description" className="font-medium"> Description </label>
                     <textarea
                         className="w-full border border-emerald-400 rounded-xl bg-white p-3"
@@ -37,22 +51,30 @@ function NewTaskPage() {
                     // value={formData.content}
                     // onChange={handleChange}
                     />
-                    <label htmlFor="task_id" className="font-medium"> Assign to </label>
+                    <label htmlFor="assignee_id" className="font-medium"> Assign to </label>
                     <GenericSelect
-                        label="task"
-                        value={task}
-                        options={taskOptions}
-                        onChange={setTask}
-                        translationPrefix='tasks_list'
+                        label="assignee"
+                        value={assignee}
+                        options={userNamesList}
+                        onChange={(newValue) => setAssignee(newValue)}
                     />
-                    <label htmlFor="task_id" className="font-medium"> Select a task </label>
+
+                    <label htmlFor="weekday_id" className="font-medium"> Day </label>
                     <GenericSelect
-                        label="task"
-                        value={task}
-                        options={taskOptions}
-                        onChange={setTask}
-                        translationPrefix='tasks_list'
+                        label="weekday"
+                        value={day}
+                        options={weekdaysOptions}
+                        onChange={(newValue) => setDay(newValue)}
                     />
+
+                    <label htmlFor="priority_id" className="font-medium"> Priority </label>
+                    <GenericSelect
+                        label="priority"
+                        value={priority}
+                        options={priorityOptions}
+                        onChange={(newValue) => setPriority(newValue)}
+                    />
+
                     <PrimaryButton
                         // isLoading={isLoading}
                         type={"submit"}

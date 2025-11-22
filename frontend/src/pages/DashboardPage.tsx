@@ -1,19 +1,20 @@
 import React, { useState, useTransition } from 'react'
 import TaskCard from '../components/TaskCard';
-import type { Task, Weekdays } from '../types/Task';
+import type { Task } from '../types/Task';
+import { Weekdays } from '../types/Task';
 import { useTranslation } from 'react-i18next';
 
 
 function DashboardPage() {
 
     const { t } = useTranslation();
-    const days: Weekdays[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const days: Weekdays[] = Object.values(Weekdays);
 
     const dummyTasks: Task[] = [
-        { id: "123e4567-e89b-12d3-a456-426614174000", day: "Monday", title: "Buy munchies" },
-        { id: "123e4567-e89b-12d3-a456-426614174001", day: "Monday", title: "Gym" },
-        { id: "123e4567-e89b-12d3-a456-426614174002", day: "Wednesday", title: "Feed cat" },
-        { id: "123e4567-e89b-12d3-a456-426614174003", day: "Friday", title: "Push to remote repo" },
+        { id: "123e4567-e89b-12d3-a456-426614174000", day: Weekdays.MONDAY, title: "Buy munchies" },
+        { id: "123e4567-e89b-12d3-a456-426614174001", day: Weekdays.MONDAY, title: "Gym" },
+        { id: "123e4567-e89b-12d3-a456-426614174002", day: Weekdays.WEDNESDAY, title: "Feed cat" },
+        { id: "123e4567-e89b-12d3-a456-426614174003", day: Weekdays.FRIDAY, title: "Push to remote repo" },
     ];
 
     return (

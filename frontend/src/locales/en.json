@@ -48,6 +48,7 @@
         "water_plants": "Water plants",
         "walk_dog": "Walk the dog",
         "feed_pet": "Feed the pet",
-        "grocery_shopping": "Grocery shopping"
+        "grocery_shopping": "Grocery shopping",
+        "other": "Other"
     }
 }

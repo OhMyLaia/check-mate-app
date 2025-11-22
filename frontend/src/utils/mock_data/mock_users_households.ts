@@ -1,11 +1,11 @@
 import { User } from "../../types/User";
 import { Household } from "../../types/Household";
 
-export const userList: User[] = 
+export const userNamesList: string[] = [];
 
 export const userEsme: User = {
     id: "123e4567-e89b-12d3-a456-426614174000",
-    name: "Alice",
+    name: "Esme",
     email: "alice@checkmate.com",
     password: "hashed_password_1",
     household: [] // We will push to this later
@@ -21,7 +21,7 @@ export const userBob: User = {
 
 export const userDafne: User = {
     id: "123e4567-e89b-12d3-a456-426614174002",
-    name: "Charlie",
+    name: "Dafne",
     email: "charlie@checkmate.com",
     password: "hashed_password_3",
     household: []
@@ -50,3 +50,5 @@ export const beachHouse: Household = {
 userEsme.household.push(mainApartment, beachHouse);
 userBob.household.push(mainApartment);
 userDafne.household.push(beachHouse);
+userNamesList.push(userBob.name, userDafne.name, userEsme.name)
+console.log(userNamesList);

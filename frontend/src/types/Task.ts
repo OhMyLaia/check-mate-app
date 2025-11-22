@@ -19,7 +19,16 @@ export enum PriorityLevel {
     LOW = "Low"
 }
 
-export type Weekdays = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
+// export type Weekdays = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
+export enum Weekdays {
+    MONDAY = "Monday",
+    TUESDAY = "Tuesday",
+    WEDNESDAY = "Wednesday",
+    THURSDAY = "Thursday",
+    FRIDAY = "Friday",
+    SATURDAY = "Saturday",
+    SUNDAY = "Sunday"
+}
 
 export enum HouseTask {
     // Kitchen
@@ -54,5 +63,8 @@ export enum HouseTask {
     WATER_PLANTS = "water_plants",
     WALK_DOG = "walk_dog",
     FEED_PET = "feed_pet",
-    GROCERY_SHOPPING = "grocery_shopping"
+    GROCERY_SHOPPING = "grocery_shopping",
+
+    // Others
+    OTHER = "other"
 }

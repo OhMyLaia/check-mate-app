@@ -48,6 +48,7 @@
         "water_plants": "Regar les plantes",
         "walk_dog": "Passejar el gos",
         "feed_pet": "Donar menjar a la mascota",
-        "grocery_shopping": "Fer la compra"
+        "grocery_shopping": "Fer la compra",
+        "other": "Altres"
     }
 }

@@ -28,7 +28,7 @@ function GenericSelect<T extends string>({
             id={`${label}_id`}
             name={`${label}`}
             value={value}
-            onChange={() => onChange}
+            onChange={(e) => onChange(e.target.value as T)}
             className="w-full rounded-md shadow-sm py-3
             border border-emerald-300 bg-white">
             <option value="" disabled>
