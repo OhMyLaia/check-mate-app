@@ -10,10 +10,10 @@ function DashboardPage() {
     const days: Weekdays[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
     const dummyTasks: Task[] = [
-        { id: "1", day: "Monday", title: "Buy munchies" },
-        { id: "2", day: "Monday", title: "Gym" },
-        { id: "3", day: "Wednesday", title: "Feed cat" },
-        { id: "4", day: "Friday", title: "Push to remote repo" },
+        { id: "123e4567-e89b-12d3-a456-426614174000", day: "Monday", title: "Buy munchies" },
+        { id: "123e4567-e89b-12d3-a456-426614174001", day: "Monday", title: "Gym" },
+        { id: "123e4567-e89b-12d3-a456-426614174002", day: "Wednesday", title: "Feed cat" },
+        { id: "123e4567-e89b-12d3-a456-426614174003", day: "Friday", title: "Push to remote repo" },
     ];
 
     return (

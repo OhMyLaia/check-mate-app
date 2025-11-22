@@ -21,5 +21,33 @@
         "Friday": "Divendres",
         "Saturday": "Dissabte",
         "Sunday": "Diumenge"
+    },
+    "tasks_list": {
+        "wash_dishes": "Rentar els plats",
+        "load_dishwasher": "Posar el rentavaixelles",
+        "empty_dishwasher": "Buidar el rentavaixelles",
+        "cook_lunch": "Fer el dinar",
+        "cook_dinner": "Fer el sopar",
+        "set_table": "Parar taula",
+        "clean_fridge": "Netejar la nevera",
+        "sweep_floor": "Escombrar el terra",
+        "mop_floor": "Fregar el terra",
+        "vacuum_clean": "Passar l'aspiradora",
+        "dust_furniture": "Treure la pols",
+        "clean_windows": "Netejar els vidres",
+        "clean_bathroom": "Netejar el bany",
+        "clean_toilet": "Netejar el vàter",
+        "take_out_trash": "Treure les escombraries",
+        "take_out_recycling": "Treure el reciclatge",
+        "do_laundry": "Posar la rentadora",
+        "hang_clothes": "Estendre la roba",
+        "fold_clothes": "Doblegar la roba",
+        "iron_clothes": "Planxar",
+        "change_sheets": "Canviar llençols",
+        "make_bed": "Fer el llit",
+        "water_plants": "Regar les plantes",
+        "walk_dog": "Passejar el gos",
+        "feed_pet": "Donar menjar a la mascota",
+        "grocery_shopping": "Fer la compra"
     }
 }

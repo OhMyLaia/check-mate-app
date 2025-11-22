@@ -21,5 +21,33 @@
         "Friday": "Viernes",
         "Saturday": "Sábado",
         "Sunday": "Domingo"
+    },
+    "tasks_list": {
+        "wash_dishes": "Fregar los platos",
+        "load_dishwasher": "Poner el lavavajillas",
+        "empty_dishwasher": "Vaciar el lavavajillas",
+        "cook_lunch": "Hacer la comida",
+        "cook_dinner": "Hacer la cena",
+        "set_table": "Poner la mesa",
+        "clean_fridge": "Limpiar la nevera",
+        "sweep_floor": "Barrer el suelo",
+        "mop_floor": "Fregar el suelo",
+        "vacuum_clean": "Pasar la aspiradora",
+        "dust_furniture": "Quitar el polvo",
+        "clean_windows": "Limpiar los cristales",
+        "clean_bathroom": "Limpiar el baño",
+        "clean_toilet": "Limpiar el inodoro",
+        "take_out_trash": "Bajar la basura",
+        "take_out_recycling": "Bajar el reciclaje",
+        "do_laundry": "Poner la lavadora",
+        "hang_clothes": "Tender la ropa",
+        "fold_clothes": "Doblar la ropa",
+        "iron_clothes": "Planchar",
+        "change_sheets": "Cambiar sábanas",
+        "make_bed": "Hacer la cama",
+        "water_plants": "Regar las plantas",
+        "walk_dog": "Pasear al perro",
+        "feed_pet": "Dar de comer a la mascota",
+        "grocery_shopping": "Hacer la compra"
     }
 }

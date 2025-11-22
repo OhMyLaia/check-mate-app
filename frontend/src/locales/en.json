@@ -21,5 +21,33 @@
         "Friday": "Friday",
         "Saturday": "Saturday",
         "Sunday": "Sunday"
+    },
+    "tasks_list": {
+        "wash_dishes": "Wash dishes",
+        "load_dishwasher": "Load dishwasher",
+        "empty_dishwasher": "Empty dishwasher",
+        "cook_lunch": "Cook lunch",
+        "cook_dinner": "Cook dinner",
+        "set_table": "Set the table",
+        "clean_fridge": "Clean fridge",
+        "sweep_floor": "Sweep floor",
+        "mop_floor": "Mop floor",
+        "vacuum_clean": "Vacuum",
+        "dust_furniture": "Dust furniture",
+        "clean_windows": "Clean windows",
+        "clean_bathroom": "Clean bathroom",
+        "clean_toilet": "Clean toilet",
+        "take_out_trash": "Take out trash",
+        "take_out_recycling": "Take out recycling",
+        "do_laundry": "Do laundry",
+        "hang_clothes": "Hang clothes",
+        "fold_clothes": "Fold clothes",
+        "iron_clothes": "Iron clothes",
+        "change_sheets": "Change sheets",
+        "make_bed": "Make the bed",
+        "water_plants": "Water plants",
+        "walk_dog": "Walk the dog",
+        "feed_pet": "Feed the pet",
+        "grocery_shopping": "Grocery shopping"
     }
 }
