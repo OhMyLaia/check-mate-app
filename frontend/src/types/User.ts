@@ -6,5 +6,5 @@ export type User = {
     name: string,
     email: string,
     password: string,
-    household: Household[]
+    household: Household[],
 }

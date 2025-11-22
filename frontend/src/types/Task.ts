@@ -14,9 +14,9 @@ export type Task = {
 }
 
 export enum PriorityLevel {
-    "high",
-    "med",
-    "low"
+    HIGH = "High",
+    MEDIUM = "Medium",
+    LOW = "Low"
 }
 
 export type Weekdays = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
