@@ -12,11 +12,19 @@ function NewTaskPage() {
     const [assignee, setAssignee] = useState<string>("");
     const [priority, setPriority] = useState<PriorityLevel | "">("");
     const [day, setDay] = useState<Weekdays | "">("");
+    const [text, setText] = useState<string>("");
 
 
     const taskOptions: HouseTask[] = Object.values(HouseTask);
     const priorityOptions: PriorityLevel[] = Object.values(PriorityLevel);
-    const weekdaysOptions: Weekdays[] = Object.values(Weekdays)
+    const weekdaysOptions: Weekdays[] = Object.values(Weekdays);
+
+    function handleTextAreaChange(event) {
+        const value = event.target.value;
+        if (value.length <= 300) {
+            setText(value);
+        }
+    }
 
     return (
         <main className='p-4 flex flex-col justify-start items-center w-full text-indigo-900'>
@@ -24,7 +32,7 @@ function NewTaskPage() {
             <div className='bg-emerald-50 h-1/3 w-3/4 shadow-lg m-5'>
                 <form className='flex flex-col gap-y-4 w-full p-5'>
 
-                <label htmlFor="task_id" className="font-medium"> Select a task </label>
+                    <label htmlFor="task_id" className="font-medium"> Select a task </label>
                     <GenericSelect
                         label="task"
                         value={task}
@@ -32,15 +40,19 @@ function NewTaskPage() {
                         onChange={setTask}
                         translationPrefix='tasks_list'
                     />
-                    <label htmlFor="task_id" className="font-thin"> Can't find it? Create a custom task </label>
-                    <input
-                        className="w-full border border-emerald-400 rounded-xl bg-white p-3"
-                        type="text"
-                        id="task_id"
-                        name="name"
-                    // value={formData.name}
-                    // onChange={handleChange}
-                    />
+
+                    {task === HouseTask.OTHER ? <div>
+                        <label htmlFor="task_id" className="font-thin"> Can't find it? Create a custom task </label>
+                        <input
+                            className="w-full border border-emerald-400 rounded-xl bg-white p-3"
+                            type="text"
+                            id="task_id"
+                            name="name"
+                        // value={formData.name}
+                        // onChange={handleChange}
+                        />
+                    </div>
+                        : ""}
 
                     <label htmlFor="description" className="font-medium"> Description </label>
                     <textarea
@@ -48,9 +60,12 @@ function NewTaskPage() {
                         id="description_id"
                         name="description"
                         placeholder='Remember to...'
+                        onChange={handleTextAreaChange}
+                        maxLength={300}
                     // value={formData.content}
                     // onChange={handleChange}
                     />
+                    <span className='text-sm text-end'>{`${text.length}/300`}</span>
                     <label htmlFor="assignee_id" className="font-medium"> Assign to </label>
                     <GenericSelect
                         label="assignee"

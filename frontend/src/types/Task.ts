@@ -19,7 +19,6 @@ export enum PriorityLevel {
     LOW = "Low"
 }
 
-// export type Weekdays = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
 export enum Weekdays {
     MONDAY = "Monday",
     TUESDAY = "Tuesday",
