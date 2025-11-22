@@ -1,6 +1,8 @@
 import { User } from "../../types/User";
 import { Household } from "../../types/Household";
 
+export const userList: User[] = 
+
 export const userEsme: User = {
     id: "123e4567-e89b-12d3-a456-426614174000",
     name: "Alice",
