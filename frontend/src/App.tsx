@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <HouseholdProvider>
-        <Navbar />
+        {/* <Navbar /> */}
         <AppRoutes />
       </HouseholdProvider>
     </>

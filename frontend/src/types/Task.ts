@@ -1,17 +1,19 @@
 import { UUID } from "crypto";
 import { Area } from "./Area";
+import { User } from "./User";
+import { Penalty } from "./Penalty";
 
 export type Task = {
     id: UUID,
     title: string,
     description?: string,
     day: Weekdays,
-    assignee?: string,
+    assignees?: User[],
     priority?: PriorityLevel,
     status?: boolean,
     area?: Area,
     icon?: string,
-    penalty?: string
+    penalty?: Penalty
 }
 
 export enum PriorityLevel {

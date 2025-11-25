@@ -10,7 +10,7 @@ export type Area = {
 }
 
 export enum CleanlinessLevel {
-    HIGH = "Impolute",
-    MED = "Chill",
+    HIGH = "High",
+    MED = "Medum",
     LOW = "Low"
 }

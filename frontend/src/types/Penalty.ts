@@ -1,7 +1,7 @@
 import { UUID } from "crypto"
 
 export type Penalty = {
-    id: UUID,
+    id: string,
     content: string,
     source: 'system' | 'custom';
     category?: 'friends' | 'family' | 'couple';
@@ -48,7 +48,6 @@ export const PenaltyDescriptions: Record<TaskPenalty, string> = {
 export enum TaskPenaltyFamily {
     NO_PHONE_HOUR = 'no_phone_hour',
     ORGANIZE_DRAWERS = 'organize_drawers',
-    SHOULDER_MASSAGE = 'shoulder_massage',
     SING_SONG = 'sing_song',
     SORRY_DRAWING = 'sorry_drawing',
     CHORE_POEM = 'chore_poem',
@@ -70,7 +69,6 @@ export enum TaskPenaltyFamily {
 export const PenaltyDescriptionsFamily: Record<TaskPenaltyFamily, string> = {
     [TaskPenaltyFamily.NO_PHONE_HOUR]: 'No phone hour (everyone interacts)',
     [TaskPenaltyFamily.ORGANIZE_DRAWERS]: 'Organise the kitchen junk drawers',
-    [TaskPenaltyFamily.SHOULDER_MASSAGE]: 'Give a 10-minute shoulder massage',
     [TaskPenaltyFamily.SING_SONG]: 'Sing a song in front of the whole family',
     [TaskPenaltyFamily.SORRY_DRAWING]: 'Create a "sorry" drawing',
     [TaskPenaltyFamily.CHORE_POEM]: 'Create a poem about chores',
@@ -129,20 +127,32 @@ export const PenaltyDescriptionsCouple: Record<TaskPenaltyCouple, string> = {
     [TaskPenaltyCouple.COMPLIMENT_SPREE]: 'Give 5 genuine compliments today',
 };
 
+
 export const SYSTEM_PENALTIES: Penalty[] = [
     ...Object.values(TaskPenalty).map((val) => ({
+        id: val,
         content: PenaltyDescriptions[val],
         source: 'system' as const,
         category: 'friends' as const,
     })),
     ...Object.values(TaskPenaltyFamily).map((val) => ({
+        id: val,
         content: PenaltyDescriptionsFamily[val],
         source: 'system' as const,
         category: 'family' as const,
     })),
     ...Object.values(TaskPenaltyCouple).map((val) => ({
+        id: val,
         content: PenaltyDescriptionsCouple[val],
         source: 'system' as const,
         category: 'couple' as const,
     })),
 ];
+
+console.table(SYSTEM_PENALTIES);
+
+export const allPenaltyDescriptions: string[] = SYSTEM_PENALTIES.map((p) => {
+    return p.content
+});
+
+// console.log(allPenaltyDescriptions);

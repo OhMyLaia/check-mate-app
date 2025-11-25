@@ -4,7 +4,7 @@ import GenericSelect from '../components/GenericSelect';
 import { User } from '../types/User';
 import { userNamesList } from '../utils/mock_data/mock_users_households';
 import { HouseTask, PriorityLevel, Task, Weekdays } from '../types/Task';
-
+import { Penalty, allPenaltyDescriptions } from '../types/Penalty';
 
 function NewTaskForm() {
 
@@ -19,6 +19,7 @@ function NewTaskForm() {
     const taskOptions: HouseTask[] = Object.values(HouseTask);
     const priorityOptions: PriorityLevel[] = Object.values(PriorityLevel);
     const weekdaysOptions: Weekdays[] = Object.values(Weekdays);
+    const penaltyOptions: string[] = Object.values(allPenaltyDescriptions);
 
     function handleTextAreaChange(event) {
         const value = event.target.value;
@@ -95,7 +96,7 @@ function NewTaskForm() {
                         label="penalty"
                         value={penalty}
                         options={penaltyOptions}
-                        onChange={(newValue) => setPriority(newValue)}
+                        onChange={(newValue) => setPenalty(newValue)}
                     />
 
                     <PrimaryButton
