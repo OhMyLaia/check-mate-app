@@ -5,6 +5,7 @@ import { User } from '../types/User';
 import { userNamesList } from '../utils/mock_data/mock_users_households';
 import { HouseTask, PriorityLevel, Task, Weekdays } from '../types/Task';
 import { Penalty, allPenaltyDescriptions } from '../types/Penalty';
+import { Navigate, NavLink } from 'react-router-dom';
 
 function NewTaskForm() {
 
@@ -98,13 +99,14 @@ function NewTaskForm() {
                         options={penaltyOptions}
                         onChange={(newValue) => setPenalty(newValue)}
                     />
-
-                    <PrimaryButton
-                        // isLoading={isLoading}
-                        type={"submit"}
-                        children={"Submit"}
-                        className={`${"bg-indigo-900 text-white"}`}
-                    />
+                    <NavLink to={"/home"}>
+                        <PrimaryButton
+                            // isLoading={isLoading}
+                            type={"submit"}
+                            children={"Submit"}
+                            className={`${"bg-indigo-900 text-white"}`}
+                        />
+                    </NavLink>
                 </form>
             </div>
         </div>

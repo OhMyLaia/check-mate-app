@@ -3,6 +3,8 @@ import TaskCard from '../components/TaskCard';
 import type { Task } from '../types/Task';
 import { Weekdays } from '../types/Task';
 import { useTranslation } from 'react-i18next';
+import PrimaryButton from '../components/PrimaryButton';
+import { Navigate, NavLink } from 'react-router-dom';
 
 
 function DashboardPage() {
@@ -16,6 +18,10 @@ function DashboardPage() {
         { id: "123e4567-e89b-12d3-a456-426614174002", day: Weekdays.WEDNESDAY, title: "Feed cat" },
         { id: "123e4567-e89b-12d3-a456-426614174003", day: Weekdays.FRIDAY, title: "Push to remote repo" },
     ];
+
+    // const openTaskModal = () => {
+    //     Navigate
+    // }
 
     return (
         <main className='w-full p-5 h-full'>
@@ -41,11 +47,15 @@ function DashboardPage() {
                                     </div>
                                 ))}
                         </div>
-                        <div className="text-center text-gray-400 text-xs mt-2 p-2
-                        border-2 border-dashed border-gray-200 rounded
-                        hover:border-gray-500 hover:text-indigo-900 hover:bg-indigo-100">
-                            + Add Task
-                        </div>
+                        <NavLink to={"/new-task"}>
+                            <button
+                            // onClick={openTaskModal}
+                            className="w-full text-center text-gray-400 text-xs mt-2 p-2
+                            border-2 border-dashed border-gray-200 rounded
+                            hover:border-gray-500 hover:text-indigo-900 hover:bg-indigo-100">
+                                + Add task
+                            </button>
+                        </NavLink>
                     </div>
                 ))}
             </div>
