@@ -29,7 +29,7 @@ function NewTaskForm() {
         }
     }
     return (
-        <div className='p-4 flex flex-col justify-start items-center w-full text-indigo-900'>
+        <div className='p-4 flex flex-col justify-start items-center w-full text-primary'>
             <h2 className='text-center lato-regular text-3xl'>New custom task</h2>
             <div className='bg-emerald-50/80 h-1/3 w-3/4 shadow-lg m-5 rounded'>
                 <form className='flex flex-col gap-y-4 w-full p-5'>

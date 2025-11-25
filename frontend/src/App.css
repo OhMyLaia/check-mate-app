@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+/* @theme {
+  --color-mint-500: oklch(0.72 0.11 178);
+} */
+
+@theme {
+  /* Main Brand Color */
+  --color-primary: #312e81; 
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary Brand Color */
+  --color-secondary: #34d399;
+  --color-secondary-light: #d1fae5;
+
+  /* Action/Alert Color */
+  --color-warning: #f97316;
+  --color-warning-light: #ffedd5;
+
+  /* Highlight/Decorative */
+  --color-highlight: #fef08a;
+
+  /* Fonts */
+  --font-body: Lato, sans-serif;
+}
+
 #root {
   margin: 0 auto;
   box-sizing: border-box;

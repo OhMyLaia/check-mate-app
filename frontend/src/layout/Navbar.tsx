@@ -72,7 +72,7 @@ function Navbar() {
                     <li className='w-fit items-center' key={link.name}>
                         <Link
                             to={link.path}
-                            className=" px-2 py-1 hover:bg-amber-200 hover:shadow-md rounded-md"
+                            className=" px-2 py-1 hover:bg-yellow-200 hover:shadow-md rounded-md"
                             onClick={() => setIsActive(false)}
                         >
                             {link.name}
@@ -116,7 +116,7 @@ function Navbar() {
 
             {/* Mobile menu */}
             <ul className={`
-                md:hidden absolute left-0 right-0 bg-amber-200 shadow-lg
+                md:hidden absolute left-0 right-0 bg-yellow-200 shadow-lg
                 px-3 z-50 rounded-lg origin-top-right
                 rounded-bl-xl rounded-br-full top-full
                 text-indigo-900 font-bold
