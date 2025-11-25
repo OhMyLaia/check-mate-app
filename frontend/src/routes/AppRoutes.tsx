@@ -6,15 +6,16 @@ import ErrorPage from "../pages/ErrorPage";
 import ContactPage from "../pages/ContactPage";
 import ProfilePage from "../pages/ProfilePage";
 import NewTaskPage from "../pages/NewTaskPage";
-
+import RegisterPage from "../pages/RegisterPage";
 function AppRoutes() {
     return (
         <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/home" element={<DashboardPage />} />
-            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/sign-up" element={<RegisterPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/new-task" element={<NewTaskPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/*" element={<ErrorPage />} />
         </Routes>
     )

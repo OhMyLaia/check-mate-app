@@ -22,7 +22,7 @@ function LandingPage() {
             <div className=''>
                 <h1 className='text-6xl'>{t('landing.title')}</h1>
                 <h2 className='text-5xl mt-1 mb-10 '>{t('landing.subtitle')}</h2>
-                <div className='shadow-lg p-3 md:p-7 rounded-xl md:w-1/2 bg-warning/40 '>
+                <div className='shadow-lg p-3 md:p-7 rounded-xl md:w-1/2 bg-secondary-light/80 '>
                     <p className='text-2xl font-bold ms-2'>
                     {t('landing.intro.hook')}
                     </p>

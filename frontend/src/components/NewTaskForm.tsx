@@ -34,7 +34,7 @@ function NewTaskForm() {
             <div className='bg-secondary-light/80 h-1/3 w-3/4 shadow-lg m-5 rounded'>
                 <form className='flex flex-col gap-y-4 w-full p-5'>
 
-                    <label htmlFor="task_id" className="font-medium"> Select a task </label>
+                    <label htmlFor="task_id" className="font-medium"> Select a task * </label>
                     <GenericSelect
                         label="task"
                         value={task}
@@ -68,7 +68,7 @@ function NewTaskForm() {
                     // onChange={handleChange}
                     />
                     <span className='text-sm text-end'>{`${text.length}/300`}</span>
-                    <label htmlFor="assignee_id" className="font-medium"> Assign to </label>
+                    <label htmlFor="assignee_id" className="font-medium"> Assign to * </label>
                     <GenericSelect
                         label="assignee"
                         value={assignee}
@@ -76,7 +76,7 @@ function NewTaskForm() {
                         onChange={(newValue) => setAssignee(newValue)}
                     />
 
-                    <label htmlFor="weekday_id" className="font-medium"> Day </label>
+                    <label htmlFor="weekday_id" className="font-medium"> Day * </label>
                     <GenericSelect
                         label="weekday"
                         value={day}
@@ -91,14 +91,14 @@ function NewTaskForm() {
                         options={priorityOptions}
                         onChange={(newValue) => setPriority(newValue)}
                     />
+                    {/* if no priority, low? */}
 
                     <label htmlFor="penalty_id"
                         className="font-medium border-2
                     bg-orange-500/10
                     text-orange-500
                     border-orange-500
-                    w-fit px-2 rounded-lg">
-                        Penalty </label>
+                    w-fit px-2 rounded-lg"> Penalty </label>
                     <GenericSelect
                         label="penalty"
                         value={penalty}

@@ -46,6 +46,7 @@ function Navbar() {
         { name: '+Task', path: '/new-task' },
         // { name: 'Dashboard', path: '/dashboard'},
         { name: 'Profile', path: '/profile' },
+        { name: 'Register', path: '/sign-up' },
         { name: 'Contact', path: '/contact' },
         // { name: 'About us', path: '/about' },
     ];
