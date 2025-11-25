@@ -92,7 +92,13 @@ function NewTaskForm() {
                         onChange={(newValue) => setPriority(newValue)}
                     />
 
-                    <label htmlFor="penalty_id" className="font-medium"> Penalty </label>
+                    <label htmlFor="penalty_id"
+                        className="font-medium border-2
+                    bg-orange-500/10
+                    text-orange-500
+                    border-orange-500
+                    w-fit px-2 rounded-lg">
+                        Penalty </label>
                     <GenericSelect
                         label="penalty"
                         value={penalty}
@@ -100,6 +106,22 @@ function NewTaskForm() {
                         onChange={(newValue) => setPenalty(newValue)}
                     />
                     <div className='w-fit'>
+
+                    {penalty === penaltyOptions[0] ? <div>
+                        <label htmlFor="task_id" className="font-thin text-orange-500"> Can't find it? Create a custom penalty </label>
+                        <input
+                            className="w-full border border-orange-500
+                            text-orange-500
+                            rounded-xl bg-white p-3"
+                            type="text"
+                            id="task_id"
+                            name="name"
+                        // value={formData.name}
+                        // onChange={handleChange}
+                        />
+                    </div>
+                        : ""}
+
                     <NavLink to={"/home"}>
                         <PrimaryButton
                             // isLoading={isLoading}

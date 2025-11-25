@@ -8,6 +8,7 @@ export type Penalty = {
 }
 
 export enum TaskPenalty {
+    OTHER = "other",
     BUY_BEER = 'buy_beer',
     BUY_CHIPS = 'buy_chips',
     BUY_COFFEE = 'buy_coffee',
@@ -23,10 +24,11 @@ export enum TaskPenalty {
     EMPTY_DISHWASHER = 'empty_dishwasher',
     TAKE_OUT_TRASH = 'take_out_trash',
     BREAKFAST_IN_BED = 'breakfast_in_bed',
-    NO_PHONE_HOUR = 'no_phone_hour',
+    NO_PHONE_HOUR = 'no_phone_hour'
 }
 
 export const PenaltyDescriptions: Record<TaskPenalty, string> = {
+    [TaskPenalty.OTHER]: 'Custom Penalty',
     [TaskPenalty.BUY_BEER]: 'Buy a beer for the house',
     [TaskPenalty.BUY_CHIPS]: 'Buy a bag of chips',
     [TaskPenalty.BUY_COFFEE]: 'Treat to a coffee',

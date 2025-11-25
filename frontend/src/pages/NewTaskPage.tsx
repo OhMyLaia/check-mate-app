@@ -5,8 +5,6 @@ import NewTaskForm from '../components/NewTaskForm';
 
 function NewTaskPage() {
 
-
-
     return (
         <main>
             <NewTaskForm />
