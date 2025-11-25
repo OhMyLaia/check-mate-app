@@ -31,7 +31,7 @@ function NewTaskForm() {
     return (
         <div className='p-4 flex flex-col justify-start items-center w-full text-primary'>
             <h2 className='text-center lato-regular text-3xl'>New custom task</h2>
-            <div className='bg-emerald-50/80 h-1/3 w-3/4 shadow-lg m-5 rounded'>
+            <div className='bg-secondary-light/80 h-1/3 w-3/4 shadow-lg m-5 rounded'>
                 <form className='flex flex-col gap-y-4 w-full p-5'>
 
                     <label htmlFor="task_id" className="font-medium"> Select a task </label>
@@ -46,7 +46,7 @@ function NewTaskForm() {
                     {task === HouseTask.OTHER ? <div>
                         <label htmlFor="task_id" className="font-thin"> Can't find it? Create a custom task </label>
                         <input
-                            className="w-full border border-emerald-400 rounded-xl bg-white p-3"
+                            className="w-full border border-secondary rounded-xl bg-white p-3"
                             type="text"
                             id="task_id"
                             name="name"
@@ -58,7 +58,7 @@ function NewTaskForm() {
 
                     <label htmlFor="description" className="font-medium"> Description </label>
                     <textarea
-                        className="w-full border border-emerald-400 rounded-xl bg-white p-3"
+                        className="w-full border border-secondary rounded-xl bg-white p-3"
                         id="description_id"
                         name="description"
                         placeholder='Remember to...'
@@ -99,14 +99,16 @@ function NewTaskForm() {
                         options={penaltyOptions}
                         onChange={(newValue) => setPenalty(newValue)}
                     />
+                    <div className='w-fit'>
                     <NavLink to={"/home"}>
                         <PrimaryButton
                             // isLoading={isLoading}
                             type={"submit"}
                             children={"Submit"}
-                            className={`${"bg-indigo-900 text-white"}`}
+                            className={`${"bg-primary border-2 border-primary text-white hover:bg-secondary hover:border-2 hover:border-primary hover:text-primary"}`}
                         />
                     </NavLink>
+                    </div>
                 </form>
             </div>
         </div>

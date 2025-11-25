@@ -33,7 +33,8 @@ function DashboardPage() {
                         key={day}
                         className="bg-slate-50 rounded-xl border border-slate-200
                         flex flex-col shadow-sm min-h-[200px]">
-                        <h2 className="bg-indigo-900 text-white p-2 text-center font-bold rounded-t-xl uppercase text-sm tracking-wider">
+                        <h2 className="bg-primary text-white p-2 text-center font-bold
+                        rounded-t-xl uppercase text-sm tracking-wider">
                             {t(`weekdays.${day}`)}
                         </h2>
                         <div className="p-2 flex-1 flex flex-col gap-2 overflow-y-auto">
@@ -52,7 +53,7 @@ function DashboardPage() {
                             // onClick={openTaskModal}
                             className="w-full text-center text-gray-400 text-xs mt-2 p-2
                             border-2 border-dashed border-gray-200 rounded
-                            hover:border-gray-500 hover:text-indigo-900 hover:bg-indigo-100">
+                            hover:border-gray-500 hover:text-primary hover:bg-highlight">
                                 + Add task
                             </button>
                         </NavLink>
