@@ -6,6 +6,21 @@
   overflow: hidden;
 }
 
+body {
+  background-image: url('./assets/paper-texture.png');
+  /* background-repeat: repeat; */
+  background-repeat: no-repeat;
+  
+  /* 2. Stretch it to cover the whole visible screen */
+  background-size: cover; 
+  
+  /* 3. LOCK IT. The content scrolls, the paper stays still. */
+  background-attachment: fixed; 
+  
+  background-position: center;
+
+}
+
 .lato-thin {
   font-family: "Lato", sans-serif;
   font-weight: 100;

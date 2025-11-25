@@ -11,6 +11,7 @@ export type Task = {
     status?: boolean,
     area?: Area,
     icon?: string,
+    penalty?: string
 }
 
 export enum PriorityLevel {

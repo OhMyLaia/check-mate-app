@@ -60,7 +60,7 @@ function Navbar() {
 
 
     return (
-        <nav ref={menuRef} className="bg-white px-3 flex flex-row justify-between items-center relative">
+        <nav ref={menuRef} className="bg-white/50 px-3 flex flex-row justify-between items-center relative">
             <div>
                 <Link to={"/"}>
                     <img src={logoLettersCheckMate} className="w-1/5" />
