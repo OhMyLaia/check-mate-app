@@ -128,3 +128,21 @@ export const PenaltyDescriptionsCouple: Record<TaskPenaltyCouple, string> = {
     [TaskPenaltyCouple.HEAD_SCRATCHES]: 'Give 10 minutes of head scratches',
     [TaskPenaltyCouple.COMPLIMENT_SPREE]: 'Give 5 genuine compliments today',
 };
+
+export const SYSTEM_PENALTIES: Penalty[] = [
+    ...Object.values(TaskPenalty).map((val) => ({
+        content: PenaltyDescriptions[val],
+        source: 'system' as const,
+        category: 'friends' as const,
+    })),
+    ...Object.values(TaskPenaltyFamily).map((val) => ({
+        content: PenaltyDescriptionsFamily[val],
+        source: 'system' as const,
+        category: 'family' as const,
+    })),
+    ...Object.values(TaskPenaltyCouple).map((val) => ({
+        content: PenaltyDescriptionsCouple[val],
+        source: 'system' as const,
+        category: 'couple' as const,
+    })),
+];
