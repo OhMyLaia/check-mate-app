@@ -30,7 +30,7 @@ function GenericSelect<T extends string>({
             value={value}
             onChange={(e) => onChange(e.target.value as T)}
             className="w-full rounded-md shadow-sm py-3
-            border border-emerald-300 bg-white">
+            border border-secondary bg-white">
             <option value="" disabled>
                 {placeholder}
             </option>

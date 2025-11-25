@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FiX, FiMenu } from "react-icons/fi";
 // import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logoLettersCheckMate from "../assets/logo-letters-check-mate.png";
 import { useTranslation } from 'react-i18next';
+import { use } from "i18next";
 
 
 function Navbar() {
@@ -42,7 +43,7 @@ function Navbar() {
 
     const links = [
         { name: 'Dashboard', path: '/home' },
-        { name: 'New Task', path: '/new-task' },
+        { name: '+Task', path: '/new-task' },
         // { name: 'Dashboard', path: '/dashboard'},
         { name: 'Profile', path: '/profile' },
         { name: 'Contact', path: '/contact' },
@@ -57,10 +58,8 @@ function Navbar() {
         i18n.changeLanguage(lng);
     };
 
-
-
     return (
-        <nav ref={menuRef} className="bg-white/50 px-3 flex flex-row justify-between items-center relative">
+        <nav ref={menuRef} className="bg-white/50 px-3 flex flex-row justify-between items-center relative text-primary">
             <div>
                 <Link to={"/"}>
                     <img src={logoLettersCheckMate} className="w-1/5" />
@@ -70,13 +69,13 @@ function Navbar() {
             <ul className="hidden md:flex space-x-6">
                 {links.map(link => (
                     <li className='w-fit items-center' key={link.name}>
-                        <Link
+                        <NavLink
                             to={link.path}
-                            className=" px-2 py-1 hover:bg-amber-200 hover:shadow-md rounded-md"
                             onClick={() => setIsActive(false)}
+                            className={({ isActive }) => isActive ? "border-2 border-secondary p-2 rounded-lg hover:bg-highlight" : "p-2 hover:bg-highlight hover:shadow-md rounded-md"}
                         >
                             {link.name}
-                        </Link>
+                        </NavLink>
                     </li>
                 ))}
                 {/* {isLoggedIn ? (
@@ -106,7 +105,7 @@ function Navbar() {
             {isMobile && (
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden w-fit text-3xl text-indigo-900 focus:outline-none
+                    className="md:hidden w-fit text-3xl text-primary focus:outline-none
                     transition-transform duration-300 hover:scale-110"
                     aria-label="Toggle menu"
                 >
@@ -116,10 +115,10 @@ function Navbar() {
 
             {/* Mobile menu */}
             <ul className={`
-                md:hidden absolute left-0 right-0 bg-amber-200 shadow-lg
+                md:hidden absolute left-0 right-0 bg-highlight/90 shadow-lg
                 px-3 z-50 rounded-lg origin-top-right
                 rounded-bl-xl rounded-br-full top-full
-                text-indigo-900 font-bold
+                text-primary font-bold
                 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
                 ${isActive ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}
             `}>

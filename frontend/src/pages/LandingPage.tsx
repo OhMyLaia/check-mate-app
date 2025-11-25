@@ -15,11 +15,11 @@ function LandingPage() {
     ];
 
     return (
-        <main className='h-screen p-5 lato-regular text-pretty text-indigo-900'>
+        <main className='min-h-screen p-5 lato-regular text-pretty text-primary'>
             <div className=''>
                 <h1 className='text-6xl'>{t('landing.title')}</h1>
                 <h2 className='text-5xl mt-1 mb-10'>{t('landing.subtitle')}</h2>
-                <div className='shadow-lg p-3 md:p-7 rounded-xl md:w-1/2 bg-emerald-100'>
+                <div className='shadow-lg p-3 md:p-7 rounded-xl md:w-1/2 bg-secondary-light/80'>
                     <p className='text-2xl font-bold ms-2'>
                     {t('landing.intro.hook')}
                     </p>
@@ -30,7 +30,7 @@ function LandingPage() {
                 </div>
             </div>
             <div className='flex flex-col md:flex-row justify-between'>
-                <div className='mt-5 shadow-lg p-3 md:p-7 h-fit rounded-xl text-2xl md:w-1/2'>
+                <div className='mt-5 shadow-lg p-3 md:p-7 h-fit rounded-xl text-2xl md:w-1/2 bg-highlight/80'>
                     <ul>
                         {benefits.map((b: string, index: number) => (
                             <div>
